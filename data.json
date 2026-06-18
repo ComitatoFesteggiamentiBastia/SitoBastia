@@ -1,0 +1,78 @@
+{
+  "anno": 2025,
+  "edizione": 41,
+  "date_breve": "2 e 3 Agosto",
+  "date_complete": "Sabato 2 e Domenica 3 Agosto 2025",
+  "banner": "Ti aspettiamo Sabato 2 e Domenica 3 Agosto!",
+
+  "programma": {
+    "sabato": {
+      "titolo": "AperiRocca & DJ Set",
+      "sommario": "Si parte alle 18.00 con l'AperiRocca, il format consolidato che prosegue con il servizio Ristorante con menù stile Pub. Alle 21.00 la S. Messa Prefestiva. Dalle 22.30 musica e animazione con DJ Set e tanto divertimento!",
+      "orari": [
+        { "ora": "18.00", "desc": "Apertura Stand Bar e Aperitivo — l'AperiRocca" },
+        { "ora": "19.30", "desc": "Apertura Stand Ristorante con Menù Stile Pub" },
+        { "ora": "21.00", "desc": "S. Messa Prefestiva" },
+        { "ora": "22.30", "desc": "DJ Set — Musica e Animazione" }
+      ],
+      "pdf_url": "https://drive.google.com/file/d/1ay6OlVCcre5O2pKDrRDUG2ReVe06qgCE/view?usp=sharing"
+    },
+    "domenica": {
+      "titolo": "Sagra, Messa & Balli",
+      "sommario": "Un programma ricco che dura tutta la giornata: Corsa Campestre, Ristorante, S. Messa solenne, Concerto d'Archi, Giochi e balli serali con estrazione Lotteria.",
+      "orari": [
+        { "ora": "8.30",  "desc": "Ritrovo Corsa Campestre" },
+        { "ora": "9.30",  "desc": "Partenza Corsa Campestre" },
+        { "ora": "10.00", "desc": "Apertura Stand Gastronomici" },
+        { "ora": "11.00", "desc": "S. Messa solenne nel Santuario" },
+        { "ora": "11.30", "desc": "Apertura Cassa Ristorante" },
+        { "ora": "12.30", "desc": "Apertura Servizio Ristorante — Pranzo" },
+        { "ora": "16.30", "desc": "Giochi di Gruppo per grandi e piccoli" },
+        { "ora": "18.30", "desc": "Apertura Cassa Ristorante — Cena" },
+        { "ora": "19.30", "desc": "Apertura Servizio Ristorante — Cena" },
+        { "ora": "21.30", "desc": "Musica e balli con Tipsy Dance" },
+        { "ora": "23.00", "desc": "Estrazione Lotteria del Santuario" }
+      ],
+      "pdf_url": "https://drive.google.com/file/d/1YB_GtaLBcUlKLUN93O4TMcFvubH1Fq2i/view?usp=sharing"
+    }
+  },
+
+  "sponsor": [
+    { "nome": "Azienda Agricola La Piana", "url": null },
+    { "nome": "CABIB",                     "url": "https://www.cabib.it" },
+    { "nome": "Comune di Busalla",         "url": "http://www.comune.busalla.ge.it" },
+    { "nome": "Edil Est",                  "url": "https://www.edilest.it" },
+    { "nome": "Edil Blu",                  "url": "https://www.edilblubusalla.it" },
+    { "nome": "Emporio Stelo",             "url": "https://emporiostelo.com" },
+    { "nome": "Enrico Grillo Cannelli",    "url": "https://www.grillogenova.com" },
+    { "nome": "Erba Voglio",               "url": null },
+    { "nome": "ET Solutions",              "url": "https://etsolutions.cloud" },
+    { "nome": "Falegnameria Costa Domenico","url": "https://costafalegnameria.it" },
+    { "nome": "Farmacia Lasagna",          "url": "https://www.facebook.com/farmacialasagna" },
+    { "nome": "Ferramenta Cavanna",        "url": "https://www.facebook.com/p/Flli-Cavanna-snc-100063107987796" },
+    { "nome": "Formaggeria Smile",         "url": "https://www.facebook.com/Formaggeriasmilebusalla" },
+    { "nome": "Francesca Coiffeur",        "url": "https://www.facebook.com/p/Francesca-Coiffeur-100054537666875" },
+    { "nome": "Gioielleria Zeggio",        "url": "https://www.facebook.com/gioielleriazeggio" },
+    { "nome": "La Morona",                 "url": "http://www.lamorona.genova.it" },
+    { "nome": "Lak Line",                  "url": "https://www.lakline.it" },
+    { "nome": "Million Miles",             "url": "https://www.instagram.com/millionmilesmusic" },
+    { "nome": "Nord Scavi",                "url": null },
+    { "nome": "Panificio Agnelli",         "url": null },
+    { "nome": "Panificio Dai Monfe",       "url": null },
+    { "nome": "Panificio Lillo",           "url": null },
+    { "nome": "Panificio Marvera",         "url": null },
+    { "nome": "Pasta Fresca Rina",         "url": "https://www.pastafrescarinabusalla.it" },
+    { "nome": "Pasticceria Valente",       "url": "https://www.facebook.com/p/Pasticceria-Valente-Busalla-100063124275978" },
+    { "nome": "Pastore",                   "url": "https://www.pastoregaudenzio.com" },
+    { "nome": "Progetto Auto",             "url": "https://www.progettoautobusalla.it" },
+    { "nome": "Punto Pizza",               "url": null },
+    { "nome": "SAR di Repetto Silvano",    "url": "https://www.paginegialle.it/busalla-ge/imprese-edili/s-a-r-repetto-silvano-impresa-edile" },
+    { "nome": "S.M.S. Liberi Operai",      "url": null },
+    { "nome": "Scrivia Asfalti",           "url": null },
+    { "nome": "Scuola Guida Cordone",      "url": "https://www.facebook.com/AutoscuolaCordone" },
+    { "nome": "Tipsy Dance",               "url": "https://www.facebook.com/p/TIPSY-DANCE-2015-100063693604010" },
+    { "nome": "Vetro Scrivia",             "url": "http://www.vetroscrivia.it" },
+    { "nome": "Viaggi Teodosia",           "url": "https://www.teodosiaviaggi.it" },
+    { "nome": "Viscol",                    "url": "http://www.viscolspa.it" }
+  ]
+}

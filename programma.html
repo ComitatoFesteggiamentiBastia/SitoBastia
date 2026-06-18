@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programma <span data-anno></span> – Sagra della Bastia</title>
+  <meta name="description" content="Il programma completo della Sagra della Bastia: Sabato e Domenica al Santuario N.S. della Bastia, Busalla.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="banner"><span data-banner></span></div>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      Sagra della Bastia
+      <small>Santuario N.S. della Bastia · Busalla</small>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="la-sagra.html">La Sagra</a></li>
+      <li><a href="programma.html" class="active">Programma</a></li>
+      <li><a href="la-storia.html">La Storia</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <p class="hero-eyebrow"><span data-edizione></span>ª Sagra Campestre · <span data-anno></span></p>
+  <h1>Il Programma</h1>
+  <p><span data-date></span></p>
+</div>
+
+<section class="section">
+  <div class="prog-grid" id="prog-grid">
+    <!-- popolato da JS -->
+  </div>
+
+  <p class="section-eyebrow" style="margin-top:3rem;">Scarica il programma</p>
+  <h2>Versione stampabile</h2>
+  <p>Scarica il programma dettagliato di ogni giornata in formato PDF.</p>
+  <div class="dl-row" id="dl-row">
+    <!-- popolato da JS -->
+  </div>
+</section>
+
+<div class="contact-band">
+  <h2>Seguici sui social</h2>
+  <p>Aggiornamenti in tempo reale su Facebook e Instagram.</p>
+  <div class="social-row">
+    <a href="https://www.facebook.com/SagradellaBastia/" target="_blank" rel="noopener" class="social-btn fb">📘 Facebook</a>
+    <a href="https://www.instagram.com/sagradellabastia" target="_blank" rel="noopener" class="social-btn ig">📸 Instagram</a>
+    <a href="https://maps.app.goo.gl/FMzY1yf6WZCRxytD9" target="_blank" rel="noopener" class="social-btn maps">📍 Come trovarci</a>
+  </div>
+  <div class="contact-email">info@sagradellabastia.it</div>
+</div>
+
+<footer class="footer">
+  <strong>www.sagradellabastia.it</strong><br>
+  Sito gestito dal <strong>Comitato Festeggiamenti N.S. della Bastia</strong><br>
+  C.F. 95240790105 &nbsp;·&nbsp; <a href="mailto:info@sagradellabastia.it">info@sagradellabastia.it</a>
+</footer>
+
+<script src="js/bastia.js"></script>
+<script>
+window.bastiaInit = function(d) {
+  const p = d.programma;
+
+  // Card sabato
+  const cardSab = `
+    <div class="prog-card">
+      <div class="prog-card-head">
+        <div class="day-label">Sabato ${d.date_breve.split(' e ')[0]} ${d.anno}</div>
+        <h3>${p.sabato.titolo}</h3>
+      </div>
+      <div class="prog-card-body">${buildOrari(p.sabato.orari)}</div>
+    </div>`;
+
+  // Card domenica
+  const cardDom = `
+    <div class="prog-card">
+      <div class="prog-card-head">
+        <div class="day-label">Domenica ${d.date_breve.split(' e ')[1]} ${d.anno}</div>
+        <h3>${p.domenica.titolo}</h3>
+      </div>
+      <div class="prog-card-body">${buildOrari(p.domenica.orari)}</div>
+    </div>`;
+
+  document.getElementById('prog-grid').innerHTML = cardSab + cardDom;
+
+  // Bottoni download PDF
+  let dlHTML = '';
+  if (p.sabato.pdf_url)   dlHTML += `<a href="${p.sabato.pdf_url}"   target="_blank" rel="noopener" class="dl-btn">⬇ Programma Sabato (PDF)</a>`;
+  if (p.domenica.pdf_url) dlHTML += `<a href="${p.domenica.pdf_url}" target="_blank" rel="noopener" class="dl-btn">⬇ Programma Domenica (PDF)</a>`;
+  document.getElementById('dl-row').innerHTML = dlHTML;
+};
+</script>
+</body>
+</html>
