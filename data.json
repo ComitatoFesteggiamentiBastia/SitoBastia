@@ -92,7 +92,7 @@
         },
         {
           "ora": "12.30",
-          "desc": "Apertura Servizio Ristorante — Pranzo"
+          "desc": "Apertura Servizio Ristorante"
         },
         {
           "ora": "16.30",
@@ -100,11 +100,11 @@
         },
         {
           "ora": "18.30",
-          "desc": "Apertura Cassa Ristorante — Cena"
+          "desc": "Apertura Cassa Ristorante"
         },
         {
           "ora": "19.30",
-          "desc": "Apertura Servizio Ristorante — Cena"
+          "desc": "Apertura Servizio Ristorante"
         },
         {
           "ora": "21.30",
