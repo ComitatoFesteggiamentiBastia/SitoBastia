@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;500;600&family=Source+Sans+3:wght@300;400;600&display=swap');
 
 :root {
-  --azzurro:    #4A7FA5;
-  --azzurro-d:  #1F3A4D;
+  --azzurro:    #2E6690;
+  --azzurro-d:  #14293A;
   --azzurro-l:  #A9C6DA;
   --sfondo:     #F4F8FB;
-  --sfondo-2:   #EAF1F6;
+  --sfondo-2:   #E4EEF5;
   --bianco:     #FFFFFF;
-  --testo:      #2C3A44;
-  --testo-2:    #5C7A8E;
-  --grigio:     #8A9AA5;
+  --testo:      #1E2A33;
+  --testo-2:    #3D5566;
+  --grigio:     #5C6E78;
 
   --font-display: 'Source Serif 4', Georgia, serif;
   --font-body:    'Source Sans 3', system-ui, sans-serif;
@@ -96,9 +96,36 @@ a { color: inherit; text-decoration: none; }
 .sponsor-section { background: var(--sfondo-2); padding: clamp(1.8rem, 4vw, 3rem) var(--gap); }
 .sponsor-inner { max-width: 1000px; margin: auto; }
 .sponsor-grid { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.2rem; }
-.sponsor-pill { background: var(--bianco); color: var(--testo-2); border: 1px solid var(--azzurro-l); border-radius: 1.4rem; padding: .35rem 1rem; font-size: .8rem; transition: border-color .2s, color .2s; }
+.sponsor-pill { background: var(--bianco); color: var(--testo-2); border: 1px solid var(--azzurro-l); border-radius: 1.4rem; padding: .35rem 1rem; font-size: .8rem; transition: border-color .2s, color .2s; display: inline-flex; align-items: center; gap: .5rem; }
 .sponsor-pill:hover { border-color: var(--azzurro); color: var(--azzurro-d); }
-.sponsor-pill a { color: inherit; }
+.sponsor-pill a { color: inherit; display: inline-flex; align-items: center; gap: .5rem; }
+.sponsor-pill img { height: 22px; width: auto; max-width: 90px; object-fit: contain; display: block; }
+
+/* GRID LOGHI (per sponsor con logo, vista più "istituzionale") */
+.sponsor-logo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; margin-top: 1.2rem; align-items: center; }
+.sponsor-logo-card { background: var(--bianco); border: 1px solid var(--sfondo-2); border-radius: var(--r); padding: 1rem; display: flex; align-items: center; justify-content: center; height: 80px; transition: border-color .2s; }
+.sponsor-logo-card:hover { border-color: var(--azzurro-l); }
+.sponsor-logo-card img { max-height: 48px; max-width: 100%; object-fit: contain; }
+
+/* CAPITOLI STORIA — layout editoriale */
+.capitolo { max-width: 760px; margin: 0 auto; padding: clamp(2rem, 5vw, 3.2rem) var(--gap); }
+.capitolo:not(:last-child) { border-bottom: 1px solid var(--sfondo-2); }
+.capitolo-num { font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: var(--azzurro); font-weight: 600; margin-bottom: .5rem; }
+.capitolo h2 { font-family: var(--font-display); font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 600; color: var(--azzurro-d); margin-bottom: 1rem; line-height: 1.3; }
+.capitolo p { color: var(--testo-2); font-size: 1rem; max-width: 62ch; }
+.capitolo p + p { margin-top: .85rem; }
+.capitolo-foto { margin-top: 1.6rem; border-radius: var(--r); overflow: hidden; border: 1px solid var(--sfondo-2); aspect-ratio: 16/9; background: var(--sfondo-2); }
+.capitolo-foto img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.capitolo-foto-due { margin-top: 1.6rem; display: grid; grid-template-columns: 1fr 1fr; gap: .9rem; }
+.capitolo-foto-due .photo-frame { aspect-ratio: 4/3; }
+
+/* PHOTO FRAME generico riusabile */
+.photo-frame { border-radius: var(--r); overflow: hidden; border: 1px solid var(--sfondo-2); background: var(--sfondo-2); }
+.photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-photo { max-width: 640px; margin: 0 auto 2rem; border-radius: var(--r); overflow: hidden; border: 1px solid var(--azzurro-l); aspect-ratio: 16/9; }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1.8rem; }
+.photo-grid .photo-frame { aspect-ratio: 4/3; }
 
 /* CONTATTI / SOCIAL */
 .contact-band { background: var(--azzurro-d); padding: clamp(1.8rem, 4vw, 3rem) var(--gap); text-align: center; }
