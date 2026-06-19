@@ -44,6 +44,7 @@
     "sabato": {
       "titolo": "AperiRocca & DJ Set",
       "sommario": "Si parte alle 18.00 con l'AperiRocca, il format consolidato che prosegue con il servizio Ristorante con menù stile Pub. Alle 21.00 la S. Messa Prefestiva. Dalle 22.30 musica e animazione con DJ Set e tanto divertimento!",
+      "foto": "img/sagra-sabato.jpg",
       "orari": [
         {
           "ora": "18.00",
@@ -67,6 +68,7 @@
     "domenica": {
       "titolo": "Sagra, Messa & Balli",
       "sommario": "Un programma ricco che dura tutta la giornata: Corsa Campestre, Ristorante, S. Messa solenne, Concerto d'Archi, Giochi e balli serali con estrazione Lotteria.",
+      "foto": "img/sagra-domenica.jpg",
       "orari": [
         {
           "ora": "8.30",

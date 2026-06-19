@@ -33,43 +33,22 @@
   <p>Dopo il successo dell'anno passato, si conferma il doppio appuntamento: <span data-date></span>!</p>
 </div>
 
-<!-- SABATO -->
-<section class="section">
-  <p class="section-eyebrow">Sabato</p>
-  <h2 id="sab-titolo"></h2>
-  <p id="sab-sommario"></p>
-</section>
+<div id="sagra-giorni-container">
+  <!-- popolato da JS: Sabato e Domenica alternati con foto -->
+</div>
 
-<hr class="section-divider">
-
-<!-- DOMENICA -->
-<section class="section">
-  <p class="section-eyebrow">Domenica</p>
-  <h2 id="dom-titolo"></h2>
-  <p id="dom-sommario"></p>
-</section>
-
-<hr class="section-divider">
-
-<!-- ATTRAZIONI (statiche — cambiano raramente) -->
-<section class="section">
-  <p class="section-eyebrow">Cosa troverai</p>
-  <h2>Le attrazioni della Sagra</h2>
-  <div class="attrazione-grid">
-    <div class="attrazione"><div class="emoji">🍽️</div><h4>Ristorante</h4><p>Pranzo e cena, menù pub il sabato</p></div>
-    <div class="attrazione"><div class="emoji">🍺</div><h4>Bar</h4><p>Per accompagnare tutta la giornata</p></div>
-    <div class="attrazione"><div class="emoji">🏃</div><h4>Corsa Campestre</h4><p>Circuito Vallescrivia</p></div>
-    <div class="attrazione"><div class="emoji">🧁</div><h4>Pane & Torte</h4><p>Fatte in casa, negli stand</p></div>
-    <div class="attrazione"><div class="emoji">🎯</div><h4>Tiro ai Barattoli</h4><p>Una sfida con gli amici!</p></div>
-    <div class="attrazione"><div class="emoji">🎣</div><h4>Pesca di Beneficenza</h4><p>Tenta la fortuna</p></div>
-    <div class="attrazione"><div class="emoji">🎟️</div><h4>Lotteria</h4><p>Ricchi premi, estrazione serale</p></div>
-    <div class="attrazione"><div class="emoji">🎵</div><h4>Giochi & Musica</h4><p>Divertimento per tutti</p></div>
-    <div class="attrazione"><div class="emoji">⛪</div><h4>S. Messa & Concerto</h4><p>Momento spirituale e culturale</p></div>
+<section class="capitolo-row no-media" style="border-top:1px solid var(--sfondo-2);">
+  <div class="capitolo-testo">
+    <h2>Vuoi sapere tutti gli orari?</h2>
+    <p>Consulta il programma completo con gli orari minuto per minuto di entrambe le giornate.</p>
+    <div style="margin-top:1.4rem">
+      <a href="programma.html" class="hero-cta" style="display:inline-block; background:var(--azzurro-d); color:var(--bianco); border:none;">Vai al Programma →</a>
+    </div>
   </div>
 </section>
 
 <!-- SPONSOR -->
-<div class="sponsor-section">
+<div class="sponsor-section" id="sponsor-section">
   <div class="sponsor-inner">
     <p class="section-eyebrow">Con il sostegno di</p>
     <h2>Grazie agli Sponsor</h2>
@@ -100,11 +79,36 @@
 <script src="js/bastia.js"></script>
 <script>
 window.bastiaInit = function(d) {
-  document.getElementById('sab-titolo').textContent  = d.programma.sabato.titolo;
-  document.getElementById('sab-sommario').textContent = d.programma.sabato.sommario;
-  document.getElementById('dom-titolo').textContent  = d.programma.domenica.titolo;
-  document.getElementById('dom-sommario').textContent = d.programma.domenica.sommario;
-  document.getElementById('sponsor-grid').innerHTML  = buildSponsor(d.sponsor);
+  const giorni = [
+    { label: 'Sabato', dati: d.programma.sabato },
+    { label: 'Domenica', dati: d.programma.domenica }
+  ];
+
+  const container = document.getElementById('sagra-giorni-container');
+  container.innerHTML = giorni.map((g, i) => {
+    const hasFoto = !!g.dati.foto;
+    const invert = i % 2 === 1 ? ' invert' : '';
+    const rowClass = hasFoto ? `capitolo-row${invert}` : 'capitolo-row no-media';
+    const mediaHTML = hasFoto
+      ? `<div class="capitolo-media"><img src="${g.dati.foto}" alt="${g.label} alla Sagra della Bastia" loading="lazy" onerror="this.closest('.capitolo-row').classList.add('no-media'); this.style.display='none';"></div>`
+      : '';
+
+    return `
+      <section class="${rowClass}">
+        <div class="capitolo-testo">
+          <p class="capitolo-num">${g.label}</p>
+          <h2>${g.dati.titolo}</h2>
+          <p>${g.dati.sommario}</p>
+        </div>
+        ${mediaHTML}
+      </section>`;
+  }).join('');
+
+  if (d.sponsor && d.sponsor.length > 0) {
+    document.getElementById('sponsor-grid').innerHTML = buildSponsor(d.sponsor);
+  } else {
+    document.getElementById('sponsor-section').style.display = 'none';
+  }
 };
 </script>
 </body>
