@@ -36,16 +36,6 @@
 <div id="capitoli-container">
 </div>
 
-<section class="capitolo-row no-media">
-  <div class="capitolo-testo">
-    <h2>La storia continua, insieme</h2>
-    <p>Ogni agosto la comunità di Busalla si ritrova al Santuario per fare festa, stare insieme e contribuire a mantenere vivo questo luogo straordinario.</p>
-    <div style="margin-top:1.4rem">
-      <a href="la-sagra.html" class="hero-cta" style="display:inline-block; background:var(--azzurro-d); color:var(--bianco); border:none;">Scopri la Sagra 2025 →</a>
-    </div>
-  </div>
-</section>
-
 <div class="contact-band">
   <h2>Seguici sui social</h2>
   <p>Foto, video e ricordi delle edizioni passate su Facebook e Instagram.</p>
@@ -67,10 +57,26 @@
 window.bastiaInit = function(d) {
   if (!d.storia || !d.storia.length) return;
   const container = document.getElementById('capitoli-container');
+  const last = d.storia.length - 1;
 
   container.innerHTML = d.storia.map((cap, i) => {
     const hasFoto = !!cap.foto;
     const hasVideo = cap.video && cap.video.length > 0;
+
+    // Ultimo capitolo con video singolo: layout speciale, video grande centrale sotto
+    if (i === last && hasVideo && cap.video.length === 1) {
+      return `
+        <section class="capitolo-row no-media">
+          <div class="capitolo-testo">
+            <h2>${cap.titolo}</h2>
+            <p>${cap.testo}</p>
+          </div>
+        </section>
+        <div class="capitolo-video-centrale">
+          <video src="${cap.video[0]}" controls preload="metadata"></video>
+        </div>`;
+    }
+
     const hasMedia = hasFoto || (hasVideo && cap.video.length === 1);
     const invert = i % 2 === 1 ? ' invert' : '';
     const rowClass = hasMedia ? `capitolo-row${invert}` : 'capitolo-row no-media';
@@ -82,17 +88,11 @@ window.bastiaInit = function(d) {
       mediaHTML = `<div class="capitolo-media"><video src="${cap.video[0]}" controls preload="metadata"></video></div>`;
     }
 
-    let videoRowHTML = '';
-    if (hasVideo && cap.video.length > 1) {
-      videoRowHTML = `<div class="capitolo-video-row">${cap.video.map(v => `<video src="${v}" controls preload="metadata"></video>`).join('')}</div>`;
-    }
-
     return `
       <section class="${rowClass}">
         <div class="capitolo-testo">
           <h2>${cap.titolo}</h2>
           <p>${cap.testo}</p>
-          ${videoRowHTML}
         </div>
         ${mediaHTML}
       </section>`;
