@@ -1,9 +1,9 @@
 {
-  "anno": 2025,
-  "edizione": 41,
-  "date_breve": "2 e 3 Agosto",
-  "date_complete": "Sabato 2 e Domenica 3 Agosto 2025",
-  "banner": "Ti aspettiamo Sabato 2 e Domenica 3 Agosto!",
+  "anno": 2026,
+  "edizione": 42,
+  "date_breve": "1 e 2 Agosto",
+  "date_complete": "Sabato 1 e Domenica 2 Agosto 2026",
+  "banner": "Ti aspettiamo Sabato 1 e Domenica 2 Agosto!",
   "foto": {
     "hero_home": "img/hero-santuario.jpg"
   },
@@ -60,14 +60,14 @@
         },
         {
           "ora": "22.30",
-          "desc": "DJ Set — Musica e Animazione"
+          "desc": "DJ Set — Musica e Animazione con DJ Fraxxo"
         }
       ],
       "pdf_url": "https://drive.google.com/file/d/1ay6OlVCcre5O2pKDrRDUG2ReVe06qgCE/view?usp=sharing"
     },
     "domenica": {
-      "titolo": "Sagra, Messa & Balli",
-      "sommario": "Un programma ricco che dura tutta la giornata: Corsa Campestre, Ristorante, S. Messa solenne, Concerto d'Archi, Giochi e balli serali con estrazione Lotteria.",
+      "titolo": "La Sagra Campestre",
+      "sommario": "Un programma ricco che dura tutta la giornata: Corsa Campestre, S. Messa solenne, Ristorante, Giochi e balli serali con estrazione Lotteria.",
       "foto": "img/sagra-domenica.jpg",
       "orari": [
         {
@@ -96,7 +96,7 @@
         },
         {
           "ora": "16.30",
-          "desc": "Giochi di Gruppo per grandi e piccoli"
+          "desc": "Animazione per grandi e piccoli"
         },
         {
           "ora": "18.30",
@@ -108,7 +108,7 @@
         },
         {
           "ora": "21.30",
-          "desc": "Musica e balli con Tipsy Dance"
+          "desc": "Musica e Karaoke con DJ Fraxxo"
         },
         {
           "ora": "23.00",
