@@ -168,9 +168,10 @@ a { color: inherit; text-decoration: none; }
 .banner a { text-decoration: underline; }
 
 /* PAGE HERO interno */
-.page-hero { background: var(--sfondo); padding: clamp(2.2rem, 5vw, 3.5rem) var(--gap); text-align: center; border-bottom: 1px solid var(--sfondo-2); }
-.page-hero h1 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 600; color: var(--azzurro-d); }
-.page-hero p { color: var(--testo-2); font-size: .98rem; max-width: 55ch; margin: .7rem auto 0; font-weight: 300; }
+.page-hero { background: var(--azzurro-d); padding: clamp(2.6rem, 6vw, 4.2rem) var(--gap); text-align: center; border-bottom: none; }
+.page-hero .hero-eyebrow { color: var(--azzurro-l); }
+.page-hero h1 { font-family: var(--font-display); font-size: clamp(1.9rem, 4.2vw, 2.7rem); font-weight: 600; color: var(--bianco); }
+.page-hero p { color: #C8D8E2; font-size: 1rem; max-width: 55ch; margin: .8rem auto 0; font-weight: 300; }
 
 /* FOOTER */
 .footer { background: var(--bianco); color: var(--grigio); text-align: center; padding: 1.8rem var(--gap); font-size: .8rem; line-height: 1.9; border-top: 1px solid var(--sfondo-2); }
