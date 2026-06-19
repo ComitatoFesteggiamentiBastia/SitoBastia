@@ -35,6 +35,9 @@
   <br>
   <a href="la-sagra.html" class="hero-cta">Scopri la Sagra</a>
   <a href="programma.html" class="hero-cta">Programma completo</a>
+  <div class="hero-photo" id="hero-photo" style="display:none">
+    <img id="hero-photo-img" src="" alt="Il Santuario N.S. della Bastia">
+  </div>
   <div class="hero-divider"></div>
 </section>
 
@@ -80,5 +83,16 @@
 </footer>
 
 <script src="js/bastia.js"></script>
+<script>
+window.bastiaInit = function(d) {
+  if (d.foto && d.foto.hero_home) {
+    const img = document.getElementById('hero-photo-img');
+    const wrap = document.getElementById('hero-photo');
+    img.onload = () => { wrap.style.display = 'block'; };
+    img.onerror = () => { wrap.style.display = 'none'; };
+    img.src = d.foto.hero_home;
+  }
+};
+</script>
 </body>
 </html>
