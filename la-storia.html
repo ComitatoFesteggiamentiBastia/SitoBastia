@@ -34,14 +34,16 @@
 </div>
 
 <div id="capitoli-container">
-  <!-- popolato da JS -->
 </div>
 
-<section class="capitolo" style="text-align:center; border-bottom:none;">
-  <p class="capitolo-num">Partecipa anche tu</p>
-  <h2>La storia continua, insieme</h2>
-  <p style="margin: 0 auto 1.8rem;">Ogni agosto la comunità di Busalla si ritrova al Santuario per fare festa, stare insieme e contribuire a mantenere vivo questo luogo straordinario.</p>
-  <a href="la-sagra.html" class="hero-cta" style="display:inline-block; background:var(--azzurro-d); color:var(--bianco); border:none;">Scopri la Sagra 2025 →</a>
+<section class="capitolo-row no-media">
+  <div class="capitolo-testo">
+    <h2>La storia continua, insieme</h2>
+    <p>Ogni agosto la comunità di Busalla si ritrova al Santuario per fare festa, stare insieme e contribuire a mantenere vivo questo luogo straordinario.</p>
+    <div style="margin-top:1.4rem">
+      <a href="la-sagra.html" class="hero-cta" style="display:inline-block; background:var(--azzurro-d); color:var(--bianco); border:none;">Scopri la Sagra 2025 →</a>
+    </div>
+  </div>
 </section>
 
 <div class="contact-band">
@@ -65,14 +67,36 @@
 window.bastiaInit = function(d) {
   if (!d.storia || !d.storia.length) return;
   const container = document.getElementById('capitoli-container');
-  container.innerHTML = d.storia.map(cap => `
-    <section class="capitolo">
-      <p class="capitolo-num">${cap.anno}</p>
-      <h2>${cap.titolo}</h2>
-      <p>${cap.testo}</p>
-      ${cap.foto ? `<div class="capitolo-foto"><img src="${cap.foto}" alt="${cap.titolo}" loading="lazy" onerror="this.closest('.capitolo-foto').style.display='none'"></div>` : ''}
-    </section>
-  `).join('');
+
+  container.innerHTML = d.storia.map((cap, i) => {
+    const hasFoto = !!cap.foto;
+    const hasVideo = cap.video && cap.video.length > 0;
+    const hasMedia = hasFoto || (hasVideo && cap.video.length === 1);
+    const invert = i % 2 === 1 ? ' invert' : '';
+    const rowClass = hasMedia ? `capitolo-row${invert}` : 'capitolo-row no-media';
+
+    let mediaHTML = '';
+    if (hasFoto) {
+      mediaHTML = `<div class="capitolo-media"><img src="${cap.foto}" alt="${cap.titolo}" loading="lazy" onerror="this.closest('.capitolo-row').classList.add('no-media'); this.style.display='none';"></div>`;
+    } else if (hasVideo && cap.video.length === 1) {
+      mediaHTML = `<div class="capitolo-media"><video src="${cap.video[0]}" controls preload="metadata"></video></div>`;
+    }
+
+    let videoRowHTML = '';
+    if (hasVideo && cap.video.length > 1) {
+      videoRowHTML = `<div class="capitolo-video-row">${cap.video.map(v => `<video src="${v}" controls preload="metadata"></video>`).join('')}</div>`;
+    }
+
+    return `
+      <section class="${rowClass}">
+        <div class="capitolo-testo">
+          <h2>${cap.titolo}</h2>
+          <p>${cap.testo}</p>
+          ${videoRowHTML}
+        </div>
+        ${mediaHTML}
+      </section>`;
+  }).join('');
 };
 </script>
 </body>

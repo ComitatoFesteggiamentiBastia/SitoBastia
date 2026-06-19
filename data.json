@@ -9,31 +9,30 @@
   },
   "storia": [
     {
-      "anno": "Anni '80",
       "titolo": "Perché è iniziato tutto",
       "testo": "Nei primi anni '80 un gruppo di amici con a cuore il destino del Santuario ha deciso di dare il via ad alcune manifestazioni con lo scopo di raccogliere fondi per mantenerlo vivo e aperto alla comunità.",
       "foto": "img/storia/storia-1.jpg"
     },
     {
-      "anno": "2000s",
       "titolo": "Gli interventi a favore del Santuario",
       "testo": "Grazie ai fondi raccolti durante la manifestazione agostana, il Comitato è riuscito ad affrontare quasi completamente un problema strutturale importante che aveva colpito il Seicentesco Santuario, rischiando di renderlo inagibile per sempre. I lavori si sono concentrati nel ripristino delle volte e di parte dei pavimenti delle navate laterali.",
       "foto": "img/storia/storia-2.jpg"
     },
     {
-      "anno": "2020",
       "titolo": "Lo stop dovuto alla pandemia",
       "testo": "La pandemia da COVID-19 ha stravolto le vite di tutti, e anche le sorti della sagra. Negli anni successivi si è deciso di rimanere fermi, le condizioni non erano ancora abbastanza stabili per poter stare tutti assieme come ci piace fare! Abbiamo tenuto viva la tradizione con la S. Messa Serale del Sabato all'aperto, come momento di comunità.",
-      "foto": null
-    },
-    {
-      "anno": "2023",
-      "titolo": "E dopo, la voglia di ripartire!",
-      "testo": "Nel 2023 si è deciso di ripartire, con una rinnovata forza! Tanti giovani si sono uniti attivamente all'organizzazione della sagra per poter ricominciare in grande stile. E dopo il successo dell'edizione 2023 di certo non ci si poteva fermare: da qui l'idea di aggiungere un momento più giovanile il Sabato, per creare ancora più aggregazione e gioia di far festa!",
       "foto": "img/storia/storia-3.jpg"
     },
     {
-      "anno": "Oggi",
+      "titolo": "E dopo, la voglia di ripartire!",
+      "testo": "Nel 2023 si è deciso di ripartire, con una rinnovata forza! Tanti giovani si sono uniti attivamente all'organizzazione della sagra per poter ricominciare in grande stile. E dopo il successo dell'edizione 2023 di certo non ci si poteva fermare: da qui l'idea di aggiungere un momento più giovanile il Sabato, per creare ancora più aggregazione e gioia di far festa!",
+      "foto": null,
+      "video": [
+        "img/storia/video-1.mp4",
+        "img/storia/video-2.mp4"
+      ]
+    },
+    {
       "titolo": "E finalmente la chiesa è tornata agibile",
       "testo": "Grazie all'impegno del Comitato e alla generosità degli sponsor e dei partecipanti, il Santuario secentesco è oggi pienamente agibile. La sagra continua a essere il motore che tiene viva questa meravigliosa chiesa e la comunità che la custodisce.",
       "foto": null
