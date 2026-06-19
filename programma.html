@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Programma <span data-anno></span> – Sagra della Bastia</title>
+  <title>Programma – Sagra della Bastia</title>
   <meta name="description" content="Il programma completo della Sagra della Bastia: Sabato e Domenica al Santuario N.S. della Bastia, Busalla.">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -66,6 +66,7 @@
 <script src="js/bastia.js"></script>
 <script>
 window.bastiaInit = function(d) {
+  document.title = `Programma ${d.anno} – Sagra della Bastia`;
   const p = d.programma;
 
   // Card sabato
