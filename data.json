@@ -1,19 +1,65 @@
 {
-  "anno": 2026,
-  "edizione": 42,
-  "date_breve": "1 e 2 Agosto",
-  "date_complete": "Sabato 1 e Domenica 2 Agosto 2026",
-  "banner": "Ti aspettiamo Sabato 1 e Domenica 2 Agosto!",
-
+  "anno": 2025,
+  "edizione": 41,
+  "date_breve": "2 e 3 Agosto",
+  "date_complete": "Sabato 2 e Domenica 3 Agosto 2025",
+  "banner": "Ti aspettiamo Sabato 2 e Domenica 3 Agosto!",
+  "foto": {
+    "hero_home": "img/hero-santuario.jpg"
+  },
+  "storia": [
+    {
+      "anno": "Anni '80",
+      "titolo": "Perché è iniziato tutto",
+      "testo": "Nei primi anni '80 un gruppo di amici con a cuore il destino del Santuario ha deciso di dare il via ad alcune manifestazioni con lo scopo di raccogliere fondi per mantenerlo vivo e aperto alla comunità.",
+      "foto": "img/storia/storia-1.jpg"
+    },
+    {
+      "anno": "2000s",
+      "titolo": "Gli interventi a favore del Santuario",
+      "testo": "Grazie ai fondi raccolti durante la manifestazione agostana, il Comitato è riuscito ad affrontare quasi completamente un problema strutturale importante che aveva colpito il Seicentesco Santuario, rischiando di renderlo inagibile per sempre. I lavori si sono concentrati nel ripristino delle volte e di parte dei pavimenti delle navate laterali.",
+      "foto": "img/storia/storia-2.jpg"
+    },
+    {
+      "anno": "2020",
+      "titolo": "Lo stop dovuto alla pandemia",
+      "testo": "La pandemia da COVID-19 ha stravolto le vite di tutti, e anche le sorti della sagra. Negli anni successivi si è deciso di rimanere fermi, le condizioni non erano ancora abbastanza stabili per poter stare tutti assieme come ci piace fare! Abbiamo tenuto viva la tradizione con la S. Messa Serale del Sabato all'aperto, come momento di comunità.",
+      "foto": null
+    },
+    {
+      "anno": "2023",
+      "titolo": "E dopo, la voglia di ripartire!",
+      "testo": "Nel 2023 si è deciso di ripartire, con una rinnovata forza! Tanti giovani si sono uniti attivamente all'organizzazione della sagra per poter ricominciare in grande stile. E dopo il successo dell'edizione 2023 di certo non ci si poteva fermare: da qui l'idea di aggiungere un momento più giovanile il Sabato, per creare ancora più aggregazione e gioia di far festa!",
+      "foto": "img/storia/storia-3.jpg"
+    },
+    {
+      "anno": "Oggi",
+      "titolo": "E finalmente la chiesa è tornata agibile",
+      "testo": "Grazie all'impegno del Comitato e alla generosità degli sponsor e dei partecipanti, il Santuario secentesco è oggi pienamente agibile. La sagra continua a essere il motore che tiene viva questa meravigliosa chiesa e la comunità che la custodisce.",
+      "foto": null
+    }
+  ],
   "programma": {
     "sabato": {
       "titolo": "AperiRocca & DJ Set",
       "sommario": "Si parte alle 18.00 con l'AperiRocca, il format consolidato che prosegue con il servizio Ristorante con menù stile Pub. Alle 21.00 la S. Messa Prefestiva. Dalle 22.30 musica e animazione con DJ Set e tanto divertimento!",
       "orari": [
-        { "ora": "18.00", "desc": "Apertura Stand Bar e Aperitivo — l'AperiRocca" },
-        { "ora": "19.30", "desc": "Apertura Stand Ristorante con Menù Stile Pub" },
-        { "ora": "21.00", "desc": "S. Messa Prefestiva" },
-        { "ora": "22.30", "desc": "DJ Set — Musica e Animazione" }
+        {
+          "ora": "18.00",
+          "desc": "Apertura Stand Bar e Aperitivo — l'AperiRocca"
+        },
+        {
+          "ora": "19.30",
+          "desc": "Apertura Stand Ristorante con Menù Stile Pub"
+        },
+        {
+          "ora": "21.00",
+          "desc": "S. Messa Prefestiva"
+        },
+        {
+          "ora": "22.30",
+          "desc": "DJ Set — Musica e Animazione"
+        }
       ],
       "pdf_url": "https://drive.google.com/file/d/1ay6OlVCcre5O2pKDrRDUG2ReVe06qgCE/view?usp=sharing"
     },
@@ -21,58 +67,234 @@
       "titolo": "Sagra, Messa & Balli",
       "sommario": "Un programma ricco che dura tutta la giornata: Corsa Campestre, Ristorante, S. Messa solenne, Concerto d'Archi, Giochi e balli serali con estrazione Lotteria.",
       "orari": [
-        { "ora": "8.30",  "desc": "Ritrovo Corsa Campestre" },
-        { "ora": "9.30",  "desc": "Partenza Corsa Campestre" },
-        { "ora": "10.00", "desc": "Apertura Stand Gastronomici" },
-        { "ora": "11.00", "desc": "S. Messa solenne nel Santuario" },
-        { "ora": "11.30", "desc": "Apertura Cassa Ristorante" },
-        { "ora": "12.30", "desc": "Apertura Servizio Ristorante — Pranzo" },
-        { "ora": "16.30", "desc": "Giochi di Gruppo per grandi e piccoli" },
-        { "ora": "18.30", "desc": "Apertura Cassa Ristorante — Cena" },
-        { "ora": "19.30", "desc": "Apertura Servizio Ristorante — Cena" },
-        { "ora": "21.30", "desc": "Musica e balli con Tipsy Dance" },
-        { "ora": "23.00", "desc": "Estrazione Lotteria del Santuario" }
+        {
+          "ora": "8.30",
+          "desc": "Ritrovo Corsa Campestre"
+        },
+        {
+          "ora": "9.30",
+          "desc": "Partenza Corsa Campestre"
+        },
+        {
+          "ora": "10.00",
+          "desc": "Apertura Stand Gastronomici"
+        },
+        {
+          "ora": "11.00",
+          "desc": "S. Messa solenne nel Santuario"
+        },
+        {
+          "ora": "11.30",
+          "desc": "Apertura Cassa Ristorante"
+        },
+        {
+          "ora": "12.30",
+          "desc": "Apertura Servizio Ristorante — Pranzo"
+        },
+        {
+          "ora": "16.30",
+          "desc": "Giochi di Gruppo per grandi e piccoli"
+        },
+        {
+          "ora": "18.30",
+          "desc": "Apertura Cassa Ristorante — Cena"
+        },
+        {
+          "ora": "19.30",
+          "desc": "Apertura Servizio Ristorante — Cena"
+        },
+        {
+          "ora": "21.30",
+          "desc": "Musica e balli con Tipsy Dance"
+        },
+        {
+          "ora": "23.00",
+          "desc": "Estrazione Lotteria del Santuario"
+        }
       ],
       "pdf_url": "https://drive.google.com/file/d/1YB_GtaLBcUlKLUN93O4TMcFvubH1Fq2i/view?usp=sharing"
     }
   },
-
   "sponsor": [
-    { "nome": "Azienda Agricola La Piana", "url": null },
-    { "nome": "CABIB",                     "url": "https://www.cabib.it" },
-    { "nome": "Comune di Busalla",         "url": "http://www.comune.busalla.ge.it" },
-    { "nome": "Edil Est",                  "url": "https://www.edilest.it" },
-    { "nome": "Edil Blu",                  "url": "https://www.edilblubusalla.it" },
-    { "nome": "Emporio Stelo",             "url": "https://emporiostelo.com" },
-    { "nome": "Enrico Grillo Cannelli",    "url": "https://www.grillogenova.com" },
-    { "nome": "Erba Voglio",               "url": null },
-    { "nome": "ET Solutions",              "url": "https://etsolutions.cloud" },
-    { "nome": "Falegnameria Costa Domenico","url": "https://costafalegnameria.it" },
-    { "nome": "Farmacia Lasagna",          "url": "https://www.facebook.com/farmacialasagna" },
-    { "nome": "Ferramenta Cavanna",        "url": "https://www.facebook.com/p/Flli-Cavanna-snc-100063107987796" },
-    { "nome": "Formaggeria Smile",         "url": "https://www.facebook.com/Formaggeriasmilebusalla" },
-    { "nome": "Francesca Coiffeur",        "url": "https://www.facebook.com/p/Francesca-Coiffeur-100054537666875" },
-    { "nome": "Gioielleria Zeggio",        "url": "https://www.facebook.com/gioielleriazeggio" },
-    { "nome": "La Morona",                 "url": "http://www.lamorona.genova.it" },
-    { "nome": "Lak Line",                  "url": "https://www.lakline.it" },
-    { "nome": "Million Miles",             "url": "https://www.instagram.com/millionmilesmusic" },
-    { "nome": "Nord Scavi",                "url": null },
-    { "nome": "Panificio Agnelli",         "url": null },
-    { "nome": "Panificio Dai Monfe",       "url": null },
-    { "nome": "Panificio Lillo",           "url": null },
-    { "nome": "Panificio Marvera",         "url": null },
-    { "nome": "Pasta Fresca Rina",         "url": "https://www.pastafrescarinabusalla.it" },
-    { "nome": "Pasticceria Valente",       "url": "https://www.facebook.com/p/Pasticceria-Valente-Busalla-100063124275978" },
-    { "nome": "Pastore",                   "url": "https://www.pastoregaudenzio.com" },
-    { "nome": "Progetto Auto",             "url": "https://www.progettoautobusalla.it" },
-    { "nome": "Punto Pizza",               "url": null },
-    { "nome": "SAR di Repetto Silvano",    "url": "https://www.paginegialle.it/busalla-ge/imprese-edili/s-a-r-repetto-silvano-impresa-edile" },
-    { "nome": "S.M.S. Liberi Operai",      "url": null },
-    { "nome": "Scrivia Asfalti",           "url": null },
-    { "nome": "Scuola Guida Cordone",      "url": "https://www.facebook.com/AutoscuolaCordone" },
-    { "nome": "Tipsy Dance",               "url": "https://www.facebook.com/p/TIPSY-DANCE-2015-100063693604010" },
-    { "nome": "Vetro Scrivia",             "url": "http://www.vetroscrivia.it" },
-    { "nome": "Viaggi Teodosia",           "url": "https://www.teodosiaviaggi.it" },
-    { "nome": "Viscol",                    "url": "http://www.viscolspa.it" }
+    {
+      "nome": "Azienda Agricola La Piana",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "CABIB",
+      "url": "https://www.cabib.it",
+      "logo": null
+    },
+    {
+      "nome": "Comune di Busalla",
+      "url": "http://www.comune.busalla.ge.it",
+      "logo": null
+    },
+    {
+      "nome": "Edil Est",
+      "url": "https://www.edilest.it",
+      "logo": null
+    },
+    {
+      "nome": "Edil Blu",
+      "url": "https://www.edilblubusalla.it",
+      "logo": null
+    },
+    {
+      "nome": "Emporio Stelo",
+      "url": "https://emporiostelo.com",
+      "logo": null
+    },
+    {
+      "nome": "Enrico Grillo Cannelli",
+      "url": "https://www.grillogenova.com",
+      "logo": null
+    },
+    {
+      "nome": "Erba Voglio",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "ET Solutions",
+      "url": "https://etsolutions.cloud",
+      "logo": null
+    },
+    {
+      "nome": "Falegnameria Costa Domenico",
+      "url": "https://costafalegnameria.it",
+      "logo": null
+    },
+    {
+      "nome": "Farmacia Lasagna",
+      "url": "https://www.facebook.com/farmacialasagna",
+      "logo": null
+    },
+    {
+      "nome": "Ferramenta Cavanna",
+      "url": "https://www.facebook.com/p/Flli-Cavanna-snc-100063107987796",
+      "logo": null
+    },
+    {
+      "nome": "Formaggeria Smile",
+      "url": "https://www.facebook.com/Formaggeriasmilebusalla",
+      "logo": null
+    },
+    {
+      "nome": "Francesca Coiffeur",
+      "url": "https://www.facebook.com/p/Francesca-Coiffeur-100054537666875",
+      "logo": null
+    },
+    {
+      "nome": "Gioielleria Zeggio",
+      "url": "https://www.facebook.com/gioielleriazeggio",
+      "logo": null
+    },
+    {
+      "nome": "La Morona",
+      "url": "http://www.lamorona.genova.it",
+      "logo": null
+    },
+    {
+      "nome": "Lak Line",
+      "url": "https://www.lakline.it",
+      "logo": null
+    },
+    {
+      "nome": "Million Miles",
+      "url": "https://www.instagram.com/millionmilesmusic",
+      "logo": null
+    },
+    {
+      "nome": "Nord Scavi",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "Panificio Agnelli",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "Panificio Dai Monfe",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "Panificio Lillo",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "Panificio Marvera",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "Pasta Fresca Rina",
+      "url": "https://www.pastafrescarinabusalla.it",
+      "logo": null
+    },
+    {
+      "nome": "Pasticceria Valente",
+      "url": "https://www.facebook.com/p/Pasticceria-Valente-Busalla-100063124275978",
+      "logo": null
+    },
+    {
+      "nome": "Pastore",
+      "url": "https://www.pastoregaudenzio.com",
+      "logo": null
+    },
+    {
+      "nome": "Progetto Auto",
+      "url": "https://www.progettoautobusalla.it",
+      "logo": null
+    },
+    {
+      "nome": "Punto Pizza",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "SAR di Repetto Silvano",
+      "url": "https://www.paginegialle.it/busalla-ge/imprese-edili/s-a-r-repetto-silvano-impresa-edile",
+      "logo": null
+    },
+    {
+      "nome": "S.M.S. Liberi Operai",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "Scrivia Asfalti",
+      "url": null,
+      "logo": null
+    },
+    {
+      "nome": "Scuola Guida Cordone",
+      "url": "https://www.facebook.com/AutoscuolaCordone",
+      "logo": null
+    },
+    {
+      "nome": "Tipsy Dance",
+      "url": "https://www.facebook.com/p/TIPSY-DANCE-2015-100063693604010",
+      "logo": null
+    },
+    {
+      "nome": "Vetro Scrivia",
+      "url": "http://www.vetroscrivia.it",
+      "logo": null
+    },
+    {
+      "nome": "Viaggi Teodosia",
+      "url": "https://www.teodosiaviaggi.it",
+      "logo": null
+    },
+    {
+      "nome": "Viscol",
+      "url": "http://www.viscolspa.it",
+      "logo": null
+    }
   ]
 }
