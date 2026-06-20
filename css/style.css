@@ -252,9 +252,11 @@ a { color: inherit; text-decoration: none; }
 .info-row .giorno { color: var(--testo); }
 .info-row .ora { color: var(--azzurro); font-weight: 700; }
 
-.app-install-banner { background: var(--sfondo-2); border-radius: var(--r); padding: 1rem 1.2rem; margin-bottom: 1.5rem; font-size: .85rem; color: var(--testo-2); text-align: center; display: none; }
+.app-install-banner { background: var(--azzurro-d); border-radius: var(--r); padding: 1.2rem 1.3rem; margin-bottom: 1.5rem; font-size: .88rem; color: var(--azzurro-l); text-align: center; display: none; }
 .app-install-banner.visible { display: block; }
-.app-install-banner button { display: block; margin: .6rem auto 0; background: var(--azzurro); color: var(--bianco); border: none; padding: .55rem 1.4rem; border-radius: var(--r); font-size: .85rem; font-weight: 600; }
+.app-install-banner strong { color: var(--bianco); font-size: 1rem; display: block; }
+.app-install-banner p { color: var(--azzurro-l); }
+.app-install-banner button { display: block; margin: .8rem auto 0; background: var(--bianco); color: var(--azzurro-d); border: none; padding: .6rem 1.6rem; border-radius: var(--r); font-size: .88rem; font-weight: 700; }
 
 .app-link-row { display: block; background: var(--bianco); border: 1px solid var(--sfondo-2); border-radius: var(--r); padding: 1rem 1.2rem; margin-bottom: .8rem; display: flex; align-items: center; justify-content: space-between; font-size: .92rem; color: var(--azzurro-d); font-weight: 600; }
 .app-link-row .arrow { color: var(--azzurro); }
