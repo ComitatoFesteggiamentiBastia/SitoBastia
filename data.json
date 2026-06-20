@@ -7,6 +7,9 @@
   "alert_attivo": true,
   "alert_messaggio": "Ti aspettiamo Sabato 1 e Domenica 2 Agosto al Santuario!",
   "mappa_url": "https://maps.app.goo.gl/FMzY1yf6WZCRxytD9",
+  "menu_url": "https://drive.google.com/file/d/1ay6OlVCcre5O2pKDrRDUG2ReVe06qgCE/view?usp=sharing",
+  "volantino_generale_url": "img/locandine/volantino_generale.pdf",
+  "volantino_sabato_url": "img/locandine/volantino_sabato.pdf",
   "messe": [
     { "giorno": "Sabato 1 Agosto", "ora": "21.00", "tipo": "S. Messa Prefestiva" },
     { "giorno": "Domenica 2 Agosto", "ora": "11.00", "tipo": "S. Messa Solenne" }

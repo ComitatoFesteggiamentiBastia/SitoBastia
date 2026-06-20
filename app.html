@@ -29,21 +29,21 @@
   </div>
 
   <div class="quick-grid">
-    <a href="programma.html" class="quick-card">
-      <span class="icon">📋</span>
-      <span class="label">Programma</span>
+    <a id="volantino-generale-link" href="#" target="_blank" rel="noopener" class="quick-card">
+      <span class="icon">📰</span>
+      <span class="label">Volantino Generale</span>
     </a>
-    <a href="https://drive.google.com/file/d/1ay6OlVCcre5O2pKDrRDUG2ReVe06qgCE/view?usp=sharing" target="_blank" rel="noopener" class="quick-card">
+    <a id="volantino-sabato-link" href="#" target="_blank" rel="noopener" class="quick-card">
+      <span class="icon">🪧</span>
+      <span class="label">Volantino Sabato</span>
+    </a>
+    <a id="menu-link" href="#" target="_blank" rel="noopener" class="quick-card">
       <span class="icon">🍽️</span>
       <span class="label">Il Menù</span>
     </a>
     <a id="mappa-link" href="#" target="_blank" rel="noopener" class="quick-card">
       <span class="icon">📍</span>
       <span class="label">Come arrivare</span>
-    </a>
-    <a href="la-sagra.html" class="quick-card">
-      <span class="icon">⛪</span>
-      <span class="label">La Sagra</span>
     </a>
   </div>
 
@@ -91,10 +91,11 @@ window.bastiaInit = function(d) {
     }
   }
 
-  // Mappa
-  if (d.mappa_url) {
-    document.getElementById('mappa-link').href = d.mappa_url;
-  }
+  // Link rapidi
+  if (d.volantino_generale_url) document.getElementById('volantino-generale-link').href = d.volantino_generale_url;
+  if (d.volantino_sabato_url) document.getElementById('volantino-sabato-link').href = d.volantino_sabato_url;
+  if (d.menu_url) document.getElementById('menu-link').href = d.menu_url;
+  if (d.mappa_url) document.getElementById('mappa-link').href = d.mappa_url;
 
   // Orari messe
   if (d.messe && d.messe.length) {
@@ -109,14 +110,12 @@ window.bastiaInit = function(d) {
 </script>
 
 <script>
-// Registrazione Service Worker
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker.register('sw.js').catch(err => console.log('SW non registrato:', err));
   });
 }
 
-// Prompt di installazione personalizzato
 let deferredPrompt;
 window.addEventListener('beforeinstallprompt', (e) => {
   e.preventDefault();
