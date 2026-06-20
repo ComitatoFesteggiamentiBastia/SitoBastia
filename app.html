@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sagra della Bastia – App</title>
+  <meta name="description" content="Programma, menù e info utili per la Sagra della Bastia, sempre con te.">
+  <meta name="theme-color" content="#14293A">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="img/icons/icon-192.png">
+  <link rel="icon" href="img/icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background:var(--sfondo);">
+
+<div class="app-wrap">
+
+  <div class="app-header">
+    <img src="img/icons/icon-192.png" alt="Sagra della Bastia">
+    <h1>Sagra della Bastia</h1>
+    <p><span data-edizione></span>ª edizione · <span data-date></span></p>
+  </div>
+
+  <div id="alert-container"></div>
+
+  <div class="app-install-banner" id="install-banner">
+    Aggiungi questa app alla schermata Home per averla sempre a portata di mano.
+    <button id="install-btn">Installa l'app</button>
+  </div>
+
+  <div class="quick-grid">
+    <a href="programma.html" class="quick-card">
+      <span class="icon">📋</span>
+      <span class="label">Programma</span>
+    </a>
+    <a href="https://drive.google.com/file/d/1ay6OlVCcre5O2pKDrRDUG2ReVe06qgCE/view?usp=sharing" target="_blank" rel="noopener" class="quick-card">
+      <span class="icon">🍽️</span>
+      <span class="label">Il Menù</span>
+    </a>
+    <a id="mappa-link" href="#" target="_blank" rel="noopener" class="quick-card">
+      <span class="icon">📍</span>
+      <span class="label">Come arrivare</span>
+    </a>
+    <a href="la-sagra.html" class="quick-card">
+      <span class="icon">⛪</span>
+      <span class="label">La Sagra</span>
+    </a>
+  </div>
+
+  <div class="info-block">
+    <h3>🙏 Orari Sante Messe</h3>
+    <div id="messe-container"></div>
+  </div>
+
+  <div class="info-block">
+    <h3>📞 Contatti</h3>
+    <div class="info-row">
+      <span class="giorno">Email</span>
+      <a href="mailto:info@sagradellabastia.it" class="ora" style="font-weight:600;">info@sagradellabastia.it</a>
+    </div>
+  </div>
+
+  <a href="https://www.facebook.com/SagradellaBastia/" target="_blank" rel="noopener" class="app-link-row">
+    📘 Seguici su Facebook <span class="arrow">→</span>
+  </a>
+  <a href="https://www.instagram.com/sagradellabastia" target="_blank" rel="noopener" class="app-link-row">
+    📸 Seguici su Instagram <span class="arrow">→</span>
+  </a>
+  <a href="index.html" class="app-link-row">
+    🌐 Vai al sito completo <span class="arrow">→</span>
+  </a>
+
+</div>
+
+<script src="js/bastia.js"></script>
+<script>
+window.bastiaInit = function(d) {
+  // Alert in-app
+  if (d.alert_attivo && d.alert_messaggio) {
+    const dismissKey = 'alert_dismissed_' + d.alert_messaggio.length + '_' + d.anno;
+    if (!sessionStorage.getItem(dismissKey)) {
+      document.getElementById('alert-container').innerHTML = `
+        <div class="alert-banner" id="alert-box">
+          <p>📢 ${d.alert_messaggio}</p>
+          <button class="alert-close" id="alert-close-btn">✕</button>
+        </div>`;
+      document.getElementById('alert-close-btn').addEventListener('click', () => {
+        document.getElementById('alert-box').remove();
+        sessionStorage.setItem(dismissKey, '1');
+      });
+    }
+  }
+
+  // Mappa
+  if (d.mappa_url) {
+    document.getElementById('mappa-link').href = d.mappa_url;
+  }
+
+  // Orari messe
+  if (d.messe && d.messe.length) {
+    document.getElementById('messe-container').innerHTML = d.messe.map(m => `
+      <div class="info-row">
+        <span class="giorno">${m.tipo}<br><small style="color:var(--grigio)">${m.giorno}</small></span>
+        <span class="ora">${m.ora}</span>
+      </div>
+    `).join('');
+  }
+};
+</script>
+
+<script>
+// Registrazione Service Worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(err => console.log('SW non registrato:', err));
+  });
+}
+
+// Prompt di installazione personalizzato
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('install-banner').classList.add('visible');
+});
+
+document.getElementById('install-btn').addEventListener('click', async () => {
+  if (deferredPrompt) {
+    deferredPrompt.prompt();
+    await deferredPrompt.userChoice;
+    deferredPrompt = null;
+    document.getElementById('install-banner').classList.remove('visible');
+  }
+});
+
+window.addEventListener('appinstalled', () => {
+  document.getElementById('install-banner').classList.remove('visible');
+});
+</script>
+</body>
+</html>

@@ -4,6 +4,13 @@
   "date_breve": "1 e 2 Agosto",
   "date_complete": "Sabato 1 e Domenica 2 Agosto 2026",
   "banner": "Ti aspettiamo Sabato 1 e Domenica 2 Agosto!",
+  "alert_attivo": true,
+  "alert_messaggio": "Ti aspettiamo Sabato 1 e Domenica 2 Agosto al Santuario!",
+  "mappa_url": "https://maps.app.goo.gl/FMzY1yf6WZCRxytD9",
+  "messe": [
+    { "giorno": "Sabato 1 Agosto", "ora": "21.00", "tipo": "S. Messa Prefestiva" },
+    { "giorno": "Domenica 2 Agosto", "ora": "11.00", "tipo": "S. Messa Solenne" }
+  ],
   "foto": {
     "hero_home": "img/hero-santuario.jpg"
   },
@@ -63,7 +70,7 @@
           "desc": "DJ Set — Musica e Animazione con DJ Fraxxo"
         }
       ],
-      "pdf_url": "https://drive.google.com/file/d/1xRHLc9F78zfP6ESnO1nCszPrR9Ug1GDG/view?usp=sharing"
+      "pdf_url": "https://drive.google.com/file/d/1ay6OlVCcre5O2pKDrRDUG2ReVe06qgCE/view?usp=sharing"
     },
     "domenica": {
       "titolo": "La Sagra Campestre",
@@ -115,7 +122,7 @@
           "desc": "Estrazione Lotteria del Santuario"
         }
       ],
-      "pdf_url": "https://drive.google.com/file/d/1nhIRbjSivJ4wgzg0btO3kpQxXdxwKB3e/view?usp=sharing"
+      "pdf_url": "https://drive.google.com/file/d/1YB_GtaLBcUlKLUN93O4TMcFvubH1Fq2i/view?usp=sharing"
     }
   },
   "_sponsor": [
