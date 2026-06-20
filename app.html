@@ -31,15 +31,15 @@
   <div class="quick-grid">
     <a id="volantino-generale-link" href="#" target="_blank" rel="noopener" class="quick-card">
       <span class="icon">📰</span>
-      <span class="label">Volantino Generale</span>
+      <span class="label">Programma Manifestazione</span>
     </a>
     <a id="volantino-sabato-link" href="#" target="_blank" rel="noopener" class="quick-card">
       <span class="icon">🪧</span>
-      <span class="label">Volantino Sabato</span>
+      <span class="label">Programma Sabato</span>
     </a>
     <a id="menu-link" href="#" target="_blank" rel="noopener" class="quick-card">
       <span class="icon">🍽️</span>
-      <span class="label">Il Menù</span>
+      <span class="label">Menù Ristorante</span>
     </a>
     <a id="mappa-link" href="#" target="_blank" rel="noopener" class="quick-card">
       <span class="icon">📍</span>
@@ -91,10 +91,33 @@ window.bastiaInit = function(d) {
     }
   }
 
-  // Link rapidi
-  if (d.volantino_generale_url) document.getElementById('volantino-generale-link').href = d.volantino_generale_url;
-  if (d.volantino_sabato_url) document.getElementById('volantino-sabato-link').href = d.volantino_sabato_url;
-  if (d.menu_url) document.getElementById('menu-link').href = d.menu_url;
+  // Link rapidi — verifica che il file esista prima di attivare il link
+  function collegaSeEsiste(id, url) {
+    if (!url) return;
+    const el = document.getElementById(id);
+    fetch(url, { method: 'HEAD' })
+      .then(res => {
+        if (res.ok) {
+          el.href = url;
+        } else {
+          disabilitaCard(el);
+        }
+      })
+      .catch(() => disabilitaCard(el));
+  }
+
+  function disabilitaCard(el) {
+    el.removeAttribute('href');
+    el.style.opacity = '.45';
+    el.style.cursor = 'default';
+    el.addEventListener('click', (e) => e.preventDefault());
+    const label = el.querySelector('.label');
+    if (label) label.textContent += ' (a breve)';
+  }
+
+  collegaSeEsiste('volantino-generale-link', d.volantino_generale_url);
+  collegaSeEsiste('volantino-sabato-link', d.volantino_sabato_url);
+  collegaSeEsiste('menu-link', d.menu_url);
   if (d.mappa_url) document.getElementById('mappa-link').href = d.mappa_url;
 
   // Orari messe

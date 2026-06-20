@@ -17,12 +17,12 @@
       Sagra della Bastia
       <small>Santuario N.S. della Bastia · Busalla</small>
     </div>
-    <ul class="nav-links">
+    <button class="nav-burger" id="nav-burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="la-storia.html">La Storia</a></li>
       <li><a href="la-sagra.html">La Sagra</a></li>
       <li><a href="programma.html">Programma</a></li>
-      <li><a href="app.html" class="nav-ar" style="background:var(--azzurro);color:var(--bianco);">📲 App</a></li>
       <li><a href="https://app.sagradellabastia.it" target="_blank" rel="noopener" class="nav-ar">🔒 Area Riservata</a></li>
     </ul>
   </div>
@@ -108,5 +108,11 @@ window.bastiaInit = function(d) {
   }
 };
 </script>
+<script>
+document.getElementById('nav-burger').addEventListener('click', () => {
+  document.getElementById('nav-links').classList.toggle('open');
+});
+</script>
 </body>
 </html>
+
