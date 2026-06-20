@@ -27,13 +27,16 @@ function buildOrari(orari) {
     </div>`).join('');
 }
 
-/** Costruisce la griglia sponsor */
+/** Costruisce la griglia sponsor — usa il logo se presente, altrimenti solo il nome */
 function buildSponsor(lista) {
   return lista.map(s => {
+    const content = s.logo
+      ? `<img src="${s.logo}" alt="${s.nome}" loading="lazy">`
+      : s.nome;
     if (s.url) {
-      return `<span class="sponsor-pill"><a href="${s.url}" target="_blank" rel="noopener">${s.nome}</a></span>`;
+      return `<span class="sponsor-pill"><a href="${s.url}" target="_blank" rel="noopener">${content}</a></span>`;
     }
-    return `<span class="sponsor-pill">${s.nome}</span>`;
+    return `<span class="sponsor-pill">${content}</span>`;
   }).join('');
 }
 
