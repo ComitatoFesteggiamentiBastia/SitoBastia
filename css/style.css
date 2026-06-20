@@ -178,7 +178,20 @@ a { color: inherit; text-decoration: none; }
 .footer strong { color: var(--azzurro-d); }
 .footer a { color: var(--grigio); }
 
+/* APP CTA SECTION — home, ben visibile */
+.app-cta-section { background: var(--azzurro-d); padding: clamp(1.8rem, 4vw, 2.6rem) var(--gap); }
+.app-cta-inner { max-width: var(--container); margin: auto; display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; justify-content: space-between; }
+.app-cta-icon { flex-shrink: 0; }
+.app-cta-icon img { width: 64px; height: 64px; border-radius: 14px; box-shadow: 0 4px 14px rgba(0,0,0,.3); }
+.app-cta-text { flex: 1; min-width: 220px; }
+.app-cta-text h2 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 600; color: var(--bianco); margin-bottom: .3rem; }
+.app-cta-text p { font-size: .92rem; color: var(--azzurro-l); }
+.app-cta-button { flex-shrink: 0; background: var(--oro, var(--bianco)); background: var(--bianco); color: var(--azzurro-d); font-weight: 700; font-size: .95rem; padding: .8rem 1.8rem; border-radius: var(--r); white-space: nowrap; transition: transform .15s, background .2s; }
+.app-cta-button:hover { transform: translateY(-2px); background: var(--sfondo-2); }
+
 @media (max-width: 700px) {
+  .app-cta-inner { flex-direction: column; text-align: center; }
+  .app-cta-button { width: 100%; text-align: center; }
   .capitolo-row { grid-template-columns: 1fr !important; }
   .capitolo-row.invert .capitolo-testo { order: 1; }
   .capitolo-row.invert .capitolo-media { order: 2; }
