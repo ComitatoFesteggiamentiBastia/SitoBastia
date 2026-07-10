@@ -132,7 +132,14 @@ a { color: inherit; text-decoration: none; }
 /* SPONSOR */
 .sponsor-section { background: var(--sfondo-2); padding: clamp(1.8rem, 4vw, 3rem) var(--gap); }
 .sponsor-inner { max-width: var(--container); margin: auto; }
-.sponsor-grid { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.2rem; }
+.sponsor-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 1.1rem; margin-top: 1.5rem; }
+.sponsor-card { background: var(--bianco); border: 1px solid var(--sfondo-2); border-radius: var(--r); padding: 1.1rem .8rem .9rem; display: flex; flex-direction: column; align-items: center; gap: .65rem; transition: border-color .2s, box-shadow .2s; }
+.sponsor-card:hover { border-color: var(--azzurro-l); box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+.sponsor-logo-wrap { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; border-radius: calc(var(--r)); overflow: hidden; background: var(--sfondo); flex-shrink: 0; }
+.sponsor-logo-wrap img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.sponsor-initials { font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--azzurro-l); }
+.sponsor-name { font-size: .78rem; color: var(--testo-2); text-align: center; line-height: 1.3; font-weight: 500; }
+/* vecchi stili pillola (non più usati, mantenuti per compatibilità) */
 .sponsor-pill { background: var(--bianco); color: var(--testo-2); border: 1px solid var(--azzurro-l); border-radius: 1.4rem; padding: .35rem 1rem; font-size: .8rem; transition: border-color .2s, color .2s; display: inline-flex; align-items: center; gap: .5rem; }
 .sponsor-pill:hover { border-color: var(--azzurro); color: var(--azzurro-d); }
 .sponsor-pill a { color: inherit; display: inline-flex; align-items: center; gap: .5rem; }
