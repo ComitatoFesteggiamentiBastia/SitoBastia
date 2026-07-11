@@ -129,7 +129,7 @@ window.bastiaInit = function(d) {
               ? `<img src="${s.logo_url}" alt="${s.ditta}" loading="lazy">`
               : `<span class="sponsor-initials">${s.ditta.charAt(0).toUpperCase()}</span>`}
           </div>
-          <span class="sponsor-name">${s.ditta}</span>
+          <div class="sponsor-name">${s.ditta}</div>
         </div>`).join('');
     })
     .catch(() => {
