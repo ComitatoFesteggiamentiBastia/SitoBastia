@@ -73,7 +73,7 @@
           "desc": "DJ Set — Musica e Animazione con DJ Fraxxo"
         }
       ],
-      "pdf_url": "img/locandine/volantino_sabato.pdf"
+      "pdf_url": "img/locandine/"
     },
     "domenica": {
       "titolo": "La Sagra Campestre",
@@ -105,8 +105,12 @@
           "desc": "Apertura Servizio Ristorante"
         },
         {
-          "ora": "16.30",
-          "desc": "Animazione per grandi e piccoli"
+          "ora": "16.00",
+          "desc": "Animazione per grandi e piccoli con Alice Eventi"
+        },
+         {
+          "ora": "17.30",
+          "desc": "Concerto in Chiesa"
         },
         {
           "ora": "18.30",
@@ -125,7 +129,7 @@
           "desc": "Estrazione Lotteria del Santuario"
         }
       ],
-      "pdf_url": "img/locandine/volantino_generale.pdf"
+      "pdf_url": "img/locandine/"
     }
   },
   "_sponsor": [
