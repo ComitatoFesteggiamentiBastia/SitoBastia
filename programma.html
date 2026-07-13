@@ -94,8 +94,8 @@ window.bastiaInit = function(d) {
 
   // Bottoni download PDF
   let dlHTML = '';
-  if (p.sabato.pdf_url)   dlHTML += `<a href="${p.sabato.pdf_url}"   target="_blank" rel="noopener" class="dl-btn">⬇ Programma Sabato (PDF)</a>`;
-  if (p.domenica.pdf_url) dlHTML += `<a href="${p.domenica.pdf_url}" target="_blank" rel="noopener" class="dl-btn">⬇ Programma Domenica (PDF)</a>`;
+  const pdfUrl = p.sabato.pdf_url || p.domenica.pdf_url;
+  if (pdfUrl) dlHTML += `<a href="${pdfUrl}" target="_blank" rel="noopener" class="dl-btn">⬇ Scarica il Programma (PDF)</a>`;
   document.getElementById('dl-row').innerHTML = dlHTML;
 };
 </script>

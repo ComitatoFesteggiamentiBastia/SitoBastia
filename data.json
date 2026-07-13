@@ -9,10 +9,17 @@
   "mappa_url": "https://maps.app.goo.gl/FMzY1yf6WZCRxytD9",
   "menu_url": "img/locandine/menu.pdf",
   "volantino_generale_url": "img/locandine/volantino_generale.pdf",
-  "volantino_sabato_url": "img/locandine/volantino_sabato.pdf",
   "messe": [
-    { "giorno": "Sabato 1 Agosto", "ora": "21.00", "tipo": "S. Messa Prefestiva" },
-    { "giorno": "Domenica 2 Agosto", "ora": "11.00", "tipo": "S. Messa Solenne" }
+    {
+      "giorno": "Sabato 1 Agosto",
+      "ora": "21.00",
+      "tipo": "S. Messa Prefestiva"
+    },
+    {
+      "giorno": "Domenica 2 Agosto",
+      "ora": "11.00",
+      "tipo": "S. Messa Solenne"
+    }
   ],
   "foto": {
     "hero_home": "img/hero-santuario.jpg"
@@ -73,7 +80,7 @@
           "desc": "DJ Set — Musica e Animazione con DJ Fraxxo"
         }
       ],
-      "pdf_url": "img/locandine/"
+      "pdf_url": "img/locandine/volantino_generale.pdf"
     },
     "domenica": {
       "titolo": "La Sagra Campestre",
@@ -108,7 +115,7 @@
           "ora": "16.00",
           "desc": "Animazione per grandi e piccoli con Alice Eventi"
         },
-         {
+        {
           "ora": "17.30",
           "desc": "Concerto in Chiesa"
         },
@@ -129,189 +136,7 @@
           "desc": "Estrazione Lotteria del Santuario"
         }
       ],
-      "pdf_url": "img/locandine/"
+      "pdf_url": "img/locandine/volantino_generale.pdf"
     }
-  },
-  "_sponsor": [
-    {
-      "nome": "Azienda Agricola La Piana",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "CABIB",
-      "url": "https://www.cabib.it",
-      "logo": null
-    },
-    {
-      "nome": "Comune di Busalla",
-      "url": "http://www.comune.busalla.ge.it",
-      "logo": null
-    },
-    {
-      "nome": "Edil Est",
-      "url": "https://www.edilest.it",
-      "logo": null
-    },
-    {
-      "nome": "Edil Blu",
-      "url": "https://www.edilblubusalla.it",
-      "logo": null
-    },
-    {
-      "nome": "Emporio Stelo",
-      "url": "https://emporiostelo.com",
-      "logo": null
-    },
-    {
-      "nome": "Enrico Grillo Cannelli",
-      "url": "https://www.grillogenova.com",
-      "logo": null
-    },
-    {
-      "nome": "Erba Voglio",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "ET Solutions",
-      "url": "https://etsolutions.cloud",
-      "logo": null
-    },
-    {
-      "nome": "Falegnameria Costa Domenico",
-      "url": "https://costafalegnameria.it",
-      "logo": null
-    },
-    {
-      "nome": "Farmacia Lasagna",
-      "url": "https://www.facebook.com/farmacialasagna",
-      "logo": null
-    },
-    {
-      "nome": "Ferramenta Cavanna",
-      "url": "https://www.facebook.com/p/Flli-Cavanna-snc-100063107987796",
-      "logo": null
-    },
-    {
-      "nome": "Formaggeria Smile",
-      "url": "https://www.facebook.com/Formaggeriasmilebusalla",
-      "logo": null
-    },
-    {
-      "nome": "Francesca Coiffeur",
-      "url": "https://www.facebook.com/p/Francesca-Coiffeur-100054537666875",
-      "logo": null
-    },
-    {
-      "nome": "Gioielleria Zeggio",
-      "url": "https://www.facebook.com/gioielleriazeggio",
-      "logo": null
-    },
-    {
-      "nome": "La Morona",
-      "url": "http://www.lamorona.genova.it",
-      "logo": null
-    },
-    {
-      "nome": "Lak Line",
-      "url": "https://www.lakline.it",
-      "logo": null
-    },
-    {
-      "nome": "Million Miles",
-      "url": "https://www.instagram.com/millionmilesmusic",
-      "logo": null
-    },
-    {
-      "nome": "Nord Scavi",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "Panificio Agnelli",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "Panificio Dai Monfe",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "Panificio Lillo",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "Panificio Marvera",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "Pasta Fresca Rina",
-      "url": "https://www.pastafrescarinabusalla.it",
-      "logo": null
-    },
-    {
-      "nome": "Pasticceria Valente",
-      "url": "https://www.facebook.com/p/Pasticceria-Valente-Busalla-100063124275978",
-      "logo": null
-    },
-    {
-      "nome": "Pastore",
-      "url": "https://www.pastoregaudenzio.com",
-      "logo": null
-    },
-    {
-      "nome": "Progetto Auto",
-      "url": "https://www.progettoautobusalla.it",
-      "logo": null
-    },
-    {
-      "nome": "Punto Pizza",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "SAR di Repetto Silvano",
-      "url": "https://www.paginegialle.it/busalla-ge/imprese-edili/s-a-r-repetto-silvano-impresa-edile",
-      "logo": null
-    },
-    {
-      "nome": "S.M.S. Liberi Operai",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "Scrivia Asfalti",
-      "url": null,
-      "logo": null
-    },
-    {
-      "nome": "Scuola Guida Cordone",
-      "url": "https://www.facebook.com/AutoscuolaCordone",
-      "logo": null
-    },
-    {
-      "nome": "Tipsy Dance",
-      "url": "https://www.facebook.com/p/TIPSY-DANCE-2015-100063693604010",
-      "logo": null
-    },
-    {
-      "nome": "Vetro Scrivia",
-      "url": "http://www.vetroscrivia.it",
-      "logo": null
-    },
-    {
-      "nome": "Viaggi Teodosia",
-      "url": "https://www.teodosiaviaggi.it",
-      "logo": null
-    },
-    {
-      "nome": "Viscol",
-      "url": "http://www.viscolspa.it",
-      "logo": null
-    }
-  ]
+  }
 }

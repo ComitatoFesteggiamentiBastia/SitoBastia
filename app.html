@@ -34,11 +34,7 @@
   <div class="quick-grid">
     <a id="volantino-generale-link" href="#" class="quick-card">
       <span class="icon">📰</span>
-      <span class="label">Programma Manifestazione</span>
-    </a>
-    <a id="volantino-sabato-link" href="#" class="quick-card">
-      <span class="icon">🪧</span>
-      <span class="label">Programma Sabato</span>
+      <span class="label">Programma della Sagra</span>
     </a>
     <a id="menu-link" href="#" class="quick-card">
       <span class="icon">🍽️</span>
@@ -123,7 +119,6 @@ window.bastiaInit = function(d) {
   }
 
   collegaSeEsiste('volantino-generale-link', d.volantino_generale_url);
-  collegaSeEsiste('volantino-sabato-link', d.volantino_sabato_url);
   collegaSeEsiste('menu-link', d.menu_url);
   if (d.mappa_url) document.getElementById('mappa-link').href = d.mappa_url;
 
